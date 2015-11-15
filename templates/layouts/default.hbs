@@ -24,27 +24,29 @@
         </header>
         <div class="outer">
             <section id="main">
-                <article class="article article-type-post" itemscope itemprop="blogPost">
+                {{#each  blog-posts }}
+                 <article class="article article-type-post" itemscope itemprop="blogPost">
                     <div class="article-meta">
-                        <a href="{{blog-post.url }}" class="article-date">
-                            <time datetime="{{blog-post.date }}" itemprop="datePublished">{{blog-post.date }}</time>
+                        <a href="{{url }}" class="article-date">
+                            <time datetime="{{date }}" itemprop="datePublished">{{date }}</time>
                         </a>
                     </div>
                     <div class="article-inner">
                         <header class="article-header">
                             <h1 itemprop="name">
-                                <a class="article-title" href="{{blog-post.url }}">{{blog-post.title }}</a>
+                                <a class="article-title" href="{{url }}">{{title}}</a>
                             </h1>
                         </header>
                         <div class="article-entry" itemprop="articleBody">
                             {{#markdown}}
-                                {{blog-post.description }}
+                                {{description }}
                             {{/markdown}}
                         </div>
                         <footer class="article-footer">
                         </footer>
                     </div>
                 </article>
+                {{/each}}
             </section>
         </div>
         <footer id="footer">
