@@ -1,24 +1,7 @@
----
-title: 白米粥
-author: 白米粥
-url: /baimizhou
-date: 2015-10-21
-blogpost: "
-
-# Blog post
-
-> This is an example blog post
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-"
----
-
 <article class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-meta">
-        <a href="{{url}}" class="article-date">
-            <time datetime="{{date}}" itemprop="datePublished">{{date}}</time>
+        <a href="{{blog-post.url }}" class="article-date">
+            <time datetime="{{blog-post.date }}" itemprop="datePublished">{{blog-post.date }}</time>
         </a>
     </div>
 
@@ -26,13 +9,13 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
         <input type="hidden" class="isFancy"/>
         <header class="article-header">
             <h1 itemprop="name">
-                <a class="article-title" href="{{url}}">{{title}}</a>
+                <a class="article-title" href="{{blog-post.url }}">{{blog-post.title }}</a>
             </h1>
         </header>
         <div class="article-entry" itemprop="articleBody">
             <p>
                 {{#markdown}}
-                    {{blogpost}}
+                    {{blog-post.description }}
                 {{/markdown}}
             </p>
         </div>
