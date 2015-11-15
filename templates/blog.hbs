@@ -1,5 +1,26 @@
 ---
-title: Blog
+title: 白米粥
+author: 白米粥
+url: /baimizhou
+date: 2015-10-21
 ---
 
-{{md 'content/blog-post.md'}}
+<article class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-meta">
+        <a href="{{url}}" class="article-date">
+            <time datetime="{{date}}" itemprop="datePublished">{{date}}</time>
+        </a>
+    </div>
+
+    <div class="article-inner">
+        <input type="hidden" class="isFancy"/>
+        <header class="article-header">
+            <h1 itemprop="name">
+                <a class="article-title" href="{{url}}">{{title}}</a>
+            </h1>
+        </header>
+        <div class="article-entry" itemprop="articleBody">
+            <p>{{md 'content/blog-post.md'}}</p>
+        </div>
+    </div>
+</article>
