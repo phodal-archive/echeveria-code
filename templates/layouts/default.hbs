@@ -5,58 +5,59 @@
 </head>
 <body>
 <div id="container">
-    <header id="header">
-        <div id="banner"></div>
-        <div id="header-outer" class="outer">
-            <div id="header-title" class="inner">
-                <h1 id="logo-wrap">
-                    <a href="/" id="logo">{{title}}</a>
-                </h1>
-            </div>
-            <div id="header-inner" class="inner">
-                <nav id="main-nav">
-                    <a id="main-nav-toggle" class="nav-icon"></a>
-                    <a class="main-nav-link" href="/">Home</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <div class="outer">
-        <section id="main">
-            <article class="article article-type-post" itemscope itemprop="blogPost">
-                <div class="article-meta">
-                    <a href="{{blog-post.url }}" class="article-date">
-                        <time datetime="{{blog-post.date }}" itemprop="datePublished">{{blog-post.date }}</time>
-                    </a>
+    <div id="wrap">
+        <header id="header">
+            <div id="banner"></div>
+            <div id="header-outer" class="outer">
+                <div id="header-title" class="inner">
+                    <h1 id="logo-wrap">
+                        <a href="/" id="logo">{{title}}</a>
+                    </h1>
                 </div>
-                <div class="article-inner">
-                    <header class="article-header">
-                        <h1 itemprop="name">
-                            <a class="article-title" href="{{blog-post.url }}">{{blog-post.title }}</a>
-                        </h1>
-                    </header>
-                    <div class="article-entry" itemprop="articleBody">
-                        {{#markdown}}
-                            {{blog-post.description }}
-                        {{/markdown}}
-                    </div>
-                    <footer class="article-footer">
-                    </footer>
+                <div id="header-inner" class="inner">
+                    <nav id="main-nav">
+                        <a id="main-nav-toggle" class="nav-icon"></a>
+                        <a class="main-nav-link" href="/">Home</a>
+                    </nav>
                 </div>
-            </article>
-        </section>
-    </div>
-    <footer id="footer">
+            </div>
+        </header>
         <div class="outer">
-            <div id="footer-info" class="inner">
-                &copy; 2015 John Doe<br>
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-            </div>
+            <section id="main">
+                <article class="article article-type-post" itemscope itemprop="blogPost">
+                    <div class="article-meta">
+                        <a href="{{blog-post.url }}" class="article-date">
+                            <time datetime="{{blog-post.date }}" itemprop="datePublished">{{blog-post.date }}</time>
+                        </a>
+                    </div>
+                    <div class="article-inner">
+                        <header class="article-header">
+                            <h1 itemprop="name">
+                                <a class="article-title" href="{{blog-post.url }}">{{blog-post.title }}</a>
+                            </h1>
+                        </header>
+                        <div class="article-entry" itemprop="articleBody">
+                            {{#markdown}}
+                                {{blog-post.description }}
+                            {{/markdown}}
+                        </div>
+                        <footer class="article-footer">
+                        </footer>
+                    </div>
+                </article>
+            </section>
         </div>
-    </footer>
+        <footer id="footer">
+            <div class="outer">
+                <div id="footer-info" class="inner">
+                    &copy; 2015 John Doe<br>
+                    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+                </div>
+            </div>
+        </footer>
+    </div>
     <nav id="mobile-nav">
         <a href="/" class="mobile-nav-link">Home</a>
-        <a href="/archives" class="mobile-nav-link">Archives</a>
     </nav>
 
     <script src="js/jquery.min.js"></script>
